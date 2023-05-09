@@ -2,11 +2,12 @@ import * as React from "react"
 
 type GreetProps = {
     name: string,
-    messageCount: number,
+    messageCount?: number, //optional props
     isLoggedIn: boolean
 }
 
 export const Greet = (props : GreetProps) => {
+    const {messageCount = 0} = props
     return (
         <>
             {!props.isLoggedIn?(
@@ -16,7 +17,7 @@ export const Greet = (props : GreetProps) => {
             ):(
                 <div>
                     <h2>Welcome {props.name}! You have created React + Typescript Template</h2>
-                    <h2>You Have {props.messageCount} Unread Messages!</h2>
+                    <h2>You Have {messageCount} Unread Messages!</h2>
                 </div>
             )}
         </>

@@ -2,7 +2,7 @@ import * as React from "react"
 
 type StatusProps = {
     // status: string
-    status: 'loading' | 'success' | 'error' | ''
+    status: 'loading' | 'success' | 'error' | '' // union of string litirals
 }
 
 export const Status = (props: StatusProps) => {
