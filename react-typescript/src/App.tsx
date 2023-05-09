@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './App.css'
+import { Button } from './components/Button'
 import { Greet } from './components/Greet'
 import { Heading } from './components/Heading'
 import { Oscar } from './components/Oscar'
@@ -38,6 +39,9 @@ function App() {
       <Oscar>
         <Heading>Oscar Goes To Natu Natu Song</Heading>
       </Oscar>
+      <Button handleClick={(event, id) => {
+        console.log('Button Clicked', event, id)
+      }} /> 
     </>
   )
 }

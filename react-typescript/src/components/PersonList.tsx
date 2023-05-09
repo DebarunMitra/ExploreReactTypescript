@@ -10,9 +10,9 @@ type PersonListProps = {
 export const PersonList = (props: PersonListProps) => {
     return (
         <div>
-            {props.nameList.map(name => {
+            {props.nameList.map((name, index) => {
                 return (
-                    <h4>{name.firstName} {name.lastName}</h4>
+                    <h4 key={`name-${index}`}>{name.firstName} {name.lastName}</h4>
                 )
             })}
         </div>
