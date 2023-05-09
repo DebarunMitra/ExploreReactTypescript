@@ -1,6 +1,7 @@
 import * as React from 'react'
 import './App.css'
 import { Button } from './components/Button'
+import { Container } from './components/Container'
 import { Greet } from './components/Greet'
 import { Heading } from './components/Heading'
 import { Input } from './components/Input'
@@ -48,6 +49,9 @@ function App() {
         handleChange={event => 
           console.log(event)
         } 
+      />
+      <Container
+        styles={{border: '1px solid white', padding: '1rem'}}
       />
     </>
   )

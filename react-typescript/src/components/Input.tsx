@@ -8,7 +8,7 @@ type InputProps = {
 export const Input = (props: InputProps) => {
     const [value, setValue] = React.useState('')
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         setValue(event.target.value)
     }
     return <input type='text' 
