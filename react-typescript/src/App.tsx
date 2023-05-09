@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import * as React from 'react'
 import './App.css'
+import { Greet } from './components/Greet'
+import { Person } from './components/Person'
+import { PersonList } from './components/PersonList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const personName = {
+    firstName: "Bruce",
+    lastName: "Wayne"
+  }
+
+  const personList = [
+    {
+      firstName: "Clark",
+      lastName: "Kint"
+    },
+    {
+      firstName: "Princess",
+      lastName: "Diana"
+    },
+    {
+      firstName: "Arthur",
+      lastName: "Curry"
+    }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Greet name="Debarun" messageCount={12} isLoggedIn={false} />
+      <Person name={personName} />
+      <PersonList nameList={personList} />
     </>
   )
 }
