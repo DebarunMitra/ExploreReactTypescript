@@ -6,17 +6,17 @@ type GreetProps = {
     isLoggedIn: boolean
 }
 
-export const Greet = (props : GreetProps) => {
-    const {messageCount = 0} = props
+export const Greet = ({name, messageCount = 0, isLoggedIn} : GreetProps) => {
+    // const {messageCount = 0} = props
     return (
         <>
-            {!props.isLoggedIn?(
+            {!isLoggedIn?(
                 <div>
                     <h2>Good Morning Guest!</h2>
                 </div>
             ):(
                 <div>
-                    <h2>Welcome {props.name}! You have created React + Typescript Template</h2>
+                    <h2>Welcome {name}! You have created React + Typescript Template</h2>
                     <h2>You Have {messageCount} Unread Messages!</h2>
                 </div>
             )}
