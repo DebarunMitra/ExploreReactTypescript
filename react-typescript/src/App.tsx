@@ -2,6 +2,8 @@ import * as React from 'react'
 import './App.css'
 import { Button } from './components/Button'
 import { Container } from './components/Container'
+import { Box } from './components/Context/Box'
+import { ThemeContextprovider } from './components/Context/ThemeContext'
 import { Greet } from './components/Greet'
 import { Heading } from './components/Heading'
 import { Input } from './components/Input'
@@ -55,6 +57,9 @@ function App() {
         styles={{border: '1px solid white', padding: '1rem'}}
       />
       <Counter />
+      <ThemeContextprovider>
+        <Box />
+      </ThemeContextprovider>
     </>
   )
 }
