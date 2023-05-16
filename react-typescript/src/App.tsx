@@ -8,6 +8,7 @@ import { Input } from './components/Input'
 import { Oscar } from './components/Oscar'
 import { Person } from './components/Person'
 import { PersonList } from './components/PersonList'
+import { Counter } from './components/State/Counter'
 import { Status } from './components/Status'
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
       <Container
         styles={{border: '1px solid white', padding: '1rem'}}
       />
+      <Counter />
     </>
   )
 }
