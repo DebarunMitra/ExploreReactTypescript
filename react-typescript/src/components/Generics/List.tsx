@@ -7,6 +7,7 @@ type ListProps<T> = {
     onClick: (value: T) => void
 }
 
+//we can specify some id object as mandatory like, { id: number }
 export const List = <T extends {}>({ items, onClick }: ListProps<T>) => {
     return (
         <div>
