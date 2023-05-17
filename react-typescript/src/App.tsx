@@ -4,6 +4,8 @@ import { Button } from './components/Button'
 import { Container } from './components/Container'
 import { Box } from './components/Context/Box'
 import { ThemeContextprovider } from './components/Context/ThemeContext'
+import { User } from './components/Context/User'
+import { UserContextprovider } from './components/Context/UserContext'
 import { Greet } from './components/Greet'
 import { Heading } from './components/Heading'
 import { Input } from './components/Input'
@@ -36,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Greet name="Debarun" isLoggedIn={true} />
+      {/* <Greet name="Debarun" isLoggedIn={true} />
       <Person name={personName} />
       <PersonList nameList={personList} />
       <Status status={'loading'} />
@@ -59,7 +61,10 @@ function App() {
       <Counter />
       <ThemeContextprovider>
         <Box />
-      </ThemeContextprovider>
+      </ThemeContextprovider> */}
+      <UserContextprovider>
+        <User />
+      </UserContextprovider>
     </>
   )
 }
