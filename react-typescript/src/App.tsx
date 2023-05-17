@@ -12,8 +12,11 @@ import { Input } from './components/Input'
 import { Oscar } from './components/Oscar'
 import { Person } from './components/Person'
 import { PersonList } from './components/PersonList'
+import { DomRef } from './components/Ref/DomRef'
+import { MutableRef } from './components/Ref/MutableRef'
 import { Counter } from './components/State/Counter'
 import { Status } from './components/Status'
+import { CounterClass } from './components/Class/CounterClass'
 
 function App() {
   const personName = {
@@ -62,9 +65,13 @@ function App() {
       <ThemeContextprovider>
         <Box />
       </ThemeContextprovider> */}
-      <UserContextprovider>
+      {/* <UserContextprovider>
         <User />
-      </UserContextprovider>
+      </UserContextprovider> */}
+      {/* <DomRef />
+      <MutableRef /> */}
+
+      <CounterClass message={'The COunter value Is '} />
     </>
   )
 }
