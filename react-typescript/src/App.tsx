@@ -19,6 +19,7 @@ import { Status } from './components/Status'
 import { CounterClass } from './components/Class/CounterClass'
 import { Private } from './components/Auth/Private'
 import { Profile } from './components/Auth/Profile'
+import { List } from './components/Generics/List'
 
 function App() {
   const personName = {
@@ -75,7 +76,31 @@ function App() {
 
       {/* <CounterClass message={'The COunter value Is '} /> */}
 
-      <Private isLoggedIn={true} component={Profile} />
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      <List
+        items={['Batman', 'Superman', 'Wonder Women']}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+        items={[{
+          firstName: "Clark",
+          lastName: "Kint"
+        },
+        {
+          firstName: "Princess",
+          lastName: "Diana"
+        },
+        {
+          firstName: "Arthur",
+          lastName: "Curry"
+        }]}
+        onClick={(item) => console.log(item)}
+      />
     </>
   )
 }
