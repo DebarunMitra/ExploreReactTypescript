@@ -23,6 +23,7 @@ import { List } from './components/Generics/List'
 import { RandomNumber } from './components/Restriction/RandomNumber'
 import { Toast } from './components/TemplateLiterals/Toast'
 import { CustomButton } from './components/HTML/Button'
+import { Text } from './components/Polymorphic/Text'
 
 function App() {
   const personName = {
@@ -113,8 +114,12 @@ function App() {
       <Toast position='center' /> */}
 
       {/* HTML tag with restriction as string */}
-      <CustomButton variant='primary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton>    
+      {/* <CustomButton variant='primary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton>     */}
       {/* <CustomButton variant='primary' onClick={() => console.log('Clicked')}><div>Primary Button</div></CustomButton> */}
+
+      <Text as='h1' size='lg'>Heading</Text>
+      <Text as='p' size='md'>Paragraph</Text>
+      <Text as='label' htmlFor='someId' size='sm' color='secondary'>Label</Text>
     </>
   )
 }
