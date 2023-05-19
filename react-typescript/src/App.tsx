@@ -20,6 +20,7 @@ import { CounterClass } from './components/Class/CounterClass'
 import { Private } from './components/Auth/Private'
 import { Profile } from './components/Auth/Profile'
 import { List } from './components/Generics/List'
+import { RandomNumber } from './components/Restriction/RandomNumber'
 
 function App() {
   const personName = {
@@ -78,15 +79,15 @@ function App() {
 
       {/* <Private isLoggedIn={true} component={Profile} /> */}
 
-      <List
+      {/* <List
         items={['Batman', 'Superman', 'Wonder Women']}
         onClick={(item) => console.log(item)}
       />
       <List
         items={[1, 2, 3]}
         onClick={(item) => console.log(item)}
-      />
-      <List
+      /> */}
+      {/* <List
         items={[{
           firstName: "Clark",
           lastName: "Kint"
@@ -100,7 +101,11 @@ function App() {
           lastName: "Curry"
         }]}
         onClick={(item) => console.log(item)}
-      />
+      /> */}
+
+      <RandomNumber value={10} isPositive={true} />
+      <RandomNumber value={-10} isNegative={true} />
+      <RandomNumber value={0} isZero={true} />
     </>
   )
 }
