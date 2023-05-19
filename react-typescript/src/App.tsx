@@ -112,7 +112,9 @@ function App() {
       {/* <Toast position='left-top' />
       <Toast position='center' /> */}
 
-      <CustomButton variant='primary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton>
+      {/* HTML tag with restriction as string */}
+      <CustomButton variant='primary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton>    
+      {/* <CustomButton variant='primary' onClick={() => console.log('Clicked')}><div>Primary Button</div></CustomButton> */}
     </>
   )
 }
